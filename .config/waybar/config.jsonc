@@ -1,0 +1,83 @@
+{
+	"reload_style_on_change": true,
+
+	"margin": "8, 8, 0, 8",
+	"height": 10,
+	"modules-left": ["systemd-failed-units", "custom/userspace"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["pulseaudio", "network", "battery", "clock", "custom/pomodoro"],
+	"systemd-failed-units": {
+		"hide-on-ok": false,
+		"format": "systemd {nr_failed} errors <span font-family='serif'> </span>",
+		"format-ok": "systemd <span font-family='serif'> </span>"
+	},
+	"custom/userspace": {
+		"format": "{}",
+		"exec": "echo ${USER}'@'${HOSTNAME}:~",
+		"tooltip": false
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"active": "󱓻"	
+		},
+		"persistent-workspaces": {
+			"*": 5
+		}
+	},
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+		"format-muted": "<span font-family='serif'></span",
+		"format-bluetooth": "<span font-family='serif'></span>",
+		"format-icons": {
+			"headphones": "<span font-family='serif'></span",
+			"default": "<span font-family='serif'></span>"
+		}
+	},
+	"network": {
+		"interval": 10,
+		"format": "{icon}  {signalStrength}%",
+		"tooltip": true,
+		"format-icons": {
+			"wifi": [ 
+				"<span font-family='serif'>󰤟</span>",
+				"<span font-family='serif'>󰤢</span>",
+				"<span font-family='serif'>󰤥</span>",
+				"<span font-family='serif'>󰤨</span>"
+			],
+			"ethernet": "<span font-family='serif'>󰈀</span>",
+			"disconnected": "<span font-family='serif'>󰤮</span>"
+		},
+		"tooltip-format": "{essid} ({ifname})"
+	},
+	"battery": {
+		"interval": 30,
+		"states": {
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [ 
+			"<span font-family='serif'>󰂎</span>",
+			"<span font-family='serif'>󰁻</span>",
+			"<span font-family='serif'>󰁼</span>",
+			"<span font-family='serif'>󰁽</span>",
+			"<span font-family='serif'>󰁾</span>",
+			"<span font-family='serif'>󰁿</span>",
+			"<span font-family='serif'>󰂀</span>",
+			"<span font-family='serif'>󰂁</span>",
+			"<span font-family='serif'>󰂂</span>",
+			"<span font-family='serif'>󰁹</span>"
+		],
+		"format-charging": "<span font-family='serif'>󰂄</span> {capacity}%"	
+	},
+	"clock": {
+		"interval": 60,
+		"tooltip": true,
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%A %d %B}"
+	},
+	"custom/pomodoro": {
+		"format": "pomo"
+	}
+}

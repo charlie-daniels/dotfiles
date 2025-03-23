@@ -1,0 +1,89 @@
+@define-color base-darkest #2e3440;
+@define-color base-dark #3b4252;
+@define-color base-light #424c5e;
+@define-color base-lightest #4c566a;
+@define-color text-dark #d8dee9;
+@define-color text-lighter #e5e9f0;
+@define-color text-lightest #eceff4;
+@define-color ui-green-blue #8fbcbb;
+@define-color ui-light-blue #88c0d0;
+@define-color ui-violet-blue #81a1c1;
+@define-color ui-light-navy #5e81ac;
+@define-color highlight-red #bf616a;
+@define-color highlight-orange #d08770;
+@define-color highlight-yellow #ebcb8b;
+@define-color highlight-green #a3be8c;
+@define-color highlight-purple #b48ead;
+
+* { 
+	font-family: "CaskaydiaCove Nerd Font Mono", serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+#systemd-failed-units, #custom-userspace, #pulseaudio, #network, #battery, #clock, #custom-pomodoro {
+	padding: 0 10px 0 10px;
+}
+
+#waybar {
+	background: @base-darkest;
+	border-radius: 10px;
+}
+
+.modules-left, #clock {
+	background: @ui-light-navy;
+}
+
+.modules-left {
+	border-radius: 10px 0 0 10px;
+}
+
+.modules-left * {
+	color: @base-darkest;
+}
+
+#workspaces button {
+	margin: 0 4px 0 4px;
+	font-size: 20px;
+}
+
+#workspaces button:nth-child(1) {
+	background: @highlight-red;
+}
+
+#workspaces button:nth-child(2) {
+	background: @highlight-orange;
+}
+
+#workspaces button:nth-child(3) {
+	background: @highlight-yellow;
+}
+
+#workspaces button:nth-child(4) {
+	background: @highlight-green;
+}
+
+#workspaces button:nth-child(5) {
+	background: @highlight-purple;
+}
+
+#pulseaudio, #network, #battery {
+	color: @text-lightest;
+}
+
+#clock {
+	padding: 0 10px 0 10px;
+}
+
+#custom-pomodoro {
+	background: @highlight-red;
+	border-radius: 0 10px 10px 0;
+}
+
+@keyframes blinker { to { opacity: 0.5; } }
+
+#battery.critical:not(.charging) {
+	animation: blinker 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
