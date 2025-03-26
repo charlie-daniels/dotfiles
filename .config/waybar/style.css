@@ -1,26 +1,25 @@
-@define-color base-darkest #2e3440;
-@define-color base-dark #3b4252;
-@define-color base-light #424c5e;
-@define-color base-lightest #4c566a;
-@define-color text-dark #d8dee9;
-@define-color text-lighter #e5e9f0;
-@define-color text-lightest #eceff4;
-@define-color ui-green-blue #8fbcbb;
-@define-color ui-light-blue #88c0d0;
-@define-color ui-violet-blue #81a1c1;
-@define-color ui-light-navy #5e81ac;
-@define-color highlight-red #bf616a;
-@define-color highlight-orange #d08770;
-@define-color highlight-yellow #ebcb8b;
-@define-color highlight-green #a3be8c;
-@define-color highlight-purple #b48ead;
+@define-color base-00 #1d2021;
+@define-color base-01 #3c3836;
+@define-color base-02 #504945;
+@define-color base-03 #665c54;
+@define-color base-04 #bdae93;
+@define-color base-05 #d5c4a1;
+@define-color base-06 #ebdbb2;
+@define-color base-07 #fbf1c7;
+@define-color red #fb4934;
+@define-color orange #fe8019;
+@define-color yellow #fabd2f;
+@define-color green #b8bb26;
+@define-color aqua #8ec07c;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color brown #d65d0e;
+
 
 * { 
-	font-family: "CaskaydiaCove Nerd Font Mono", serif;
-	font-size: 14px;
+	font-family: "FiraMono Nerd Font", serif;
+	font-size: 12px;
 	font-weight: bold;
-	padding: 0;
-	margin: 0;
 }
 
 #systemd-failed-units, #custom-userspace, #pulseaudio, #network, #battery, #clock, #custom-pomodoro {
@@ -28,12 +27,11 @@
 }
 
 #waybar {
-	background: @base-darkest;
-	border-radius: 10px;
+	background: @base-00;
 }
 
 .modules-left, #clock {
-	background: @ui-light-navy;
+	background: @brown;
 }
 
 .modules-left {
@@ -41,44 +39,26 @@
 }
 
 .modules-left * {
-	color: @base-darkest;
+	color: @base-00;
 }
 
 #workspaces button {
-	margin: 0 4px 0 4px;
-	font-size: 20px;
+	padding: 0;
+	border-radius: 0;
+	min-height: 0;
+	font-size: 2px;
+	background: @base-02;
 }
 
-#workspaces button:nth-child(1) {
-	background: @highlight-red;
+#workspaces button.active {
+	background: @base-04;
 }
 
-#workspaces button:nth-child(2) {
-	background: @highlight-orange;
-}
-
-#workspaces button:nth-child(3) {
-	background: @highlight-yellow;
-}
-
-#workspaces button:nth-child(4) {
-	background: @highlight-green;
-}
-
-#workspaces button:nth-child(5) {
-	background: @highlight-purple;
-}
-
-#pulseaudio, #network, #battery {
-	color: @text-lightest;
-}
-
-#clock {
-	padding: 0 10px 0 10px;
+#pulseaudio, #network, #battery, #custom-pomodoro {
+	color: @base-06;
 }
 
 #custom-pomodoro {
-	background: @highlight-red;
 	border-radius: 0 10px 10px 0;
 }
 
