@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of folders/files to update to Github
-declare -a needUpdate=(".config/waybar" "images/backgrounds" ".config/hypr" ".config/kitty" ".config/theme" ".local/bin" ".zshrc" ".vimrc")
+declare -a needUpdate=(".config/waybar" "images/backgrounds" ".config/hypr" ".config/kitty" ".config/theme" ".local/bin" ".zshrc" ".vimrc" ".config/tofi/config")
 
 # Local dotfiles folder
 dotfilesPath="$HOME/documents/configs/dotfiles"
