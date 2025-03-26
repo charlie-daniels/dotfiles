@@ -3,7 +3,7 @@
 
 	"margin": "0, 0, 0, 0",
 	"height": 18,
-	"modules-left": ["systemd-failed-units", "custom/userspace"],
+	"modules-left": ["systemd-failed-units", "custom/userspace", "cpu", "memory", "temperature"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["pulseaudio", "network", "battery", "clock", "custom/pomodoro"],
 	"systemd-failed-units": {
@@ -16,11 +16,23 @@
 		"exec": "echo ${USER}'@'${HOSTNAME}:~",
 		"tooltip": false
 	},
+	"cpu": {
+		"interval": 1,
+		"format": "<span font-family='serif'></span> {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+	},
+	"memory": {
+		"interval": 4,
+		"format": "<span font-family='serif'> </span> {used:0.1f}G/{total:0.1f}G"
+	},
+	"temperature": {
+		"format": "<span font-family='serif'></span> {temperatureC}°C"
+	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
 			"default": "",
-			"active": ""// "󱓻"	
+			"active": ""
 		},
 		"persistent-workspaces": {
 			"*": 5

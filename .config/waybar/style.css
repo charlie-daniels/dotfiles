@@ -22,7 +22,7 @@
 	font-weight: bold;
 }
 
-#systemd-failed-units, #custom-userspace, #pulseaudio, #network, #battery, #clock, #custom-pomodoro {
+#systemd-failed-units, #custom-userspace, #pulseaudio, #network, #battery, #clock, #custom-pomodoro, #cpu, #memory, #temperature {
 	padding: 0 10px 0 10px;
 }
 
@@ -30,16 +30,12 @@
 	background: @base-00;
 }
 
-.modules-left, #clock {
+#custom-userspace, #clock {
 	background: @brown;
 }
 
 .modules-left {
 	border-radius: 10px 0 0 10px;
-}
-
-.modules-left * {
-	color: @base-00;
 }
 
 #workspaces button {
@@ -54,7 +50,7 @@
 	background: @base-04;
 }
 
-#pulseaudio, #network, #battery, #custom-pomodoro {
+#systemd-failed-units, #cpu, #memory, #temperature, #pulseaudio, #network, #battery, #custom-pomodoro {
 	color: @base-06;
 }
 

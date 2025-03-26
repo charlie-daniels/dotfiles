@@ -32,6 +32,7 @@ pipewire 1:1.4.1-1
 pipewire-alsa 1:1.4.1-1
 pipewire-jack 1:1.4.1-1
 pipewire-pulse 1:1.4.1-1
+stress 1.0.7-3
 vim 9.1.1198-1
 waybar 0.12.0-1
 wget 1.25.0-2
