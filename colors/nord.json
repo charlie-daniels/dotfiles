@@ -1,0 +1,23 @@
+{
+  "scheme": "Nord",
+  "author": "arcticicestudio",
+  "colors": {
+    "dark-gray": "#2E3440", 
+    "gray-1": "#3B4252", 
+    "gray-2": "#434C5E", 
+    "gray-3": "#4C566A", 
+    "light-gray": "#D8DEE9", 
+    "off-white": "#E5E9F0", 
+    "white": "#ECEFF4", 
+    "light-green": "#8FBCBB", 
+    "light-blue": "#88C0D0", 
+    "blue": "#81A1C1", 
+    "dark-blue": "#5E81AC", 
+    "red": "#BF616A", 
+    "orange": "#D08770", 
+    "yellow": "#EBCB8B", 
+    "green": "#A3BE8C", 
+    "purple": "#B48EAD"
+  }
+}
+
