@@ -1,8 +1,8 @@
 {
 	"reload_style_on_change": true,
 
-	"margin": "8, 8, 0, 8",
-	"height": 10,
+	"margin": "0, 0, 0, 0",
+	"height": 18,
 	"modules-left": ["systemd-failed-units", "custom/userspace"],
 	"modules-center": ["hyprland/workspaces"],
 	"modules-right": ["pulseaudio", "network", "battery", "clock", "custom/pomodoro"],
@@ -20,7 +20,7 @@
 		"format": "{icon}",
 		"format-icons": {
 			"default": "",
-			"active": "󱓻"	
+			"active": ""// "󱓻"	
 		},
 		"persistent-workspaces": {
 			"*": 5
@@ -78,6 +78,10 @@
 		"tooltip-format": "{:%A %d %B}"
 	},
 	"custom/pomodoro": {
-		"format": "pomo"
+		"format": "{}",
+		"return-type": "json",
+		"exec": "waybar-module-pomodoro",
+		"on-click": "waybar-module-pomodoro toggle",
+		"on-click-right": "waybar-module-pomodoro reset"
 	}
 }
