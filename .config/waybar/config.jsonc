@@ -92,8 +92,8 @@
 	"custom/pomodoro": {
 		"format": "{}",
 		"return-type": "json",
-		"exec": "waybar-module-pomodoro",
-		"on-click": "waybar-module-pomodoro toggle",
-		"on-click-right": "waybar-module-pomodoro reset"
+		"exec": "/home/charlie/.local/bin/waybar-module-pomodoro",
+		"on-click": "/home/charlie/.local/bin/waybar-module-pomodoro toggle",
+		"on-click-right": "/home/charlie/.local/bin/waybar-module-pomodoro reset"
 	}
 }
