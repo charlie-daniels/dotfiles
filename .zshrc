@@ -19,3 +19,12 @@ compinit
 autoload -Uz promptinit
 promptinit
 PROMPT='%n@%m %~ %# '
+
+# Aliases
+
+# Todo list and update todo list
+alias td="vim ~/.todo/todo.md"
+alias uptd="~/.local/bin/update-todos.sh"
+
+# Update dotfiles
+alias updf="~/.local/bin/update-dotfiles.sh"
