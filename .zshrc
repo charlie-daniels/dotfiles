@@ -8,19 +8,23 @@ HISTSIZE=50
 SAVEHIST=500
 unsetopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '/home/charlie/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+autoload -Uz compinit && compinit
+autoload -Uz promptinit && promptinit
+# Load VCS into prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+# And format branch details
+zstyle ':vcs_info:git:*' formats '%b '
 
-autoload -Uz promptinit
-promptinit
-PROMPT='%n@%m %~ %# '
+setopt PROMPT_SUBST
+PROMPT='%F{green}%T%f %F{yellow}%~%f %F{red}${vcs_info_msg_0_}%f%F{white}$%f '
 
 # Aliases
+
+# Colors
+alias ls="ls --color"
 
 # Todo list and update todo list
 alias td="vim ~/.todo/todo.md"
