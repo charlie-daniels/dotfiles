@@ -23,12 +23,17 @@ PROMPT='%F{green}%T%f %F{yellow}%~%f %F{red}${vcs_info_msg_0_}%f%F{white}$%f '
 
 # Aliases
 
+# Common
+alias gs="git status"
+alias zrc="vim ~/.zshrc"
+alias fzfp='vim $(fzf --preview="bat --color=always {}")'
+
 # Colors
 alias ls="ls --color"
 
-# Todo list and update todo list
+# Todo list
 alias td="vim ~/.todo/todo.md"
-alias uptd="~/.local/bin/update-todos.sh"
 
-# Update dotfiles
+# Updates
 alias updf="~/.local/bin/update-dotfiles.sh"
+alias uptd="~/.local/bin/update-todos.sh"
