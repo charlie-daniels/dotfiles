@@ -47,7 +47,7 @@ I use [`getnf`](https://github.com/getnf/getnf) to easily install [`Nerd Fonts`]
 ### Hyprland
 
 - Most keybinds are hyprland defaults.
-- prtscr = executes [`hyprshot`](https://github.com/Gustash/Hyprshot)
+- `prtscr` = executes [`hyprshot`](https://github.com/Gustash/Hyprshot)
 - `super + f` = executes `tofi-run`
 
 ### Zsh
