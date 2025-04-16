@@ -4,7 +4,7 @@
 declare -a needUpdate=(".config/waybar" "images/backgrounds" ".config/hypr" ".config/kitty" ".config/theme" ".local/bin" ".zshrc" ".vimrc" ".config/tofi/config")
 
 # Local dotfiles folder
-dotfilesPath="$HOME/documents/configs/dotfiles"
+dotfilesPath="$HOME/configs/dotfiles"
 
 # Iterate through each file/folder and replace to the dotfiles folder
 for f in "${needUpdate[@]}"; do
