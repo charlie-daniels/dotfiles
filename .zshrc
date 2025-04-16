@@ -26,7 +26,8 @@ PROMPT='%F{green}%T%f %F{yellow}%~%f %F{red}${vcs_info_msg_0_}%f%F{white}$%f '
 # Common
 alias gs="git status"
 alias zrc="vim ~/.zshrc"
-alias fzfp='vim $(fzf --preview="bat --color=always {}")'
+alias ff='vim $(fzf --preview="bat --color=always {}")'
+alias fd='cd $(find * -type d | fzf)'
 
 # Colors
 alias ls="ls --color"
